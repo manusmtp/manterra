@@ -4,6 +4,8 @@
 
 .terraform/
 terraform*
+.terraform.*
+.terraform*
 
 # Exclude JSON files
 mans3
