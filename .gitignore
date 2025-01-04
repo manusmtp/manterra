@@ -1,0 +1,9 @@
+# Terraform state files
+*.tfstate
+*.tfstate.*
+
+.terraform/
+terraform*
+
+# Exclude JSON files
+mans3
