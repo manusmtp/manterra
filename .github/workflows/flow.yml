@@ -23,3 +23,15 @@ jobs:
 
     - name: Terraform Apply
       run: terraform apply -auto-approve 
+
+  dummy:
+   needs: terraform
+   runs-on: ubuntu-latest
+
+   steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Test step
+      run: echo "✅ Running tests after build..."
+     
+   
