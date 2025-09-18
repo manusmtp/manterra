@@ -35,18 +35,11 @@ jobs:
     - name: Terraform Plan
       run:  cd AWS/ ; terraform plan 
 
-    - name: Terraform Apply
-      run: cd AWS/ ;terraform apply -auto-approve 
+    #- name: Terraform Apply
+    #  run: cd AWS/ ;terraform apply -auto-approve 
 
-  dummy:
-    needs: terraform
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-
-    - name: Test step
-      run: echo "✅ Running tests after build..."
+    - name: del
+      run: cd AWS/ ; terraform destroy -auto-approve
+  
 
    
