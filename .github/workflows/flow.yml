@@ -22,6 +22,12 @@ jobs:
     - name: Set up Terraform
       uses: hashicorp/setup-terraform@v2
 
+    - name: Install Git LFS
+      run: |
+        sudo apt-get install git-lfs
+        git lfs install
+        git lfs pull
+
 
     - name: initing
       run: cd AWS/ ; terraform init
