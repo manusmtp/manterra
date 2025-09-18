@@ -23,7 +23,7 @@ jobs:
       uses: hashicorp/setup-terraform@v2
 
     - name: Terraform Init
-      run: terraform init
+      run: cd AWS / ; terraform init
 
     - name: Terraform Plan
       run: terraform plan 
