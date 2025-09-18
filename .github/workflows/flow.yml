@@ -22,17 +22,15 @@ jobs:
     - name: Set up Terraform
       uses: hashicorp/setup-terraform@v2
 
-    - name: navigate to dir
-      run: cd AWS/ 
 
     - name: initing
-      run: terraform init
+      run: cd AWS/ ; terraform init
 
     - name: Terraform Plan
-      run: pwd ; ls ; cd AWS/ ; terraform plan 
+      run:  cd AWS/ ; terraform plan 
 
     - name: Terraform Apply
-      run: terraform apply -auto-approve 
+      run: cd AWS/ ;terraform apply -auto-approve 
 
   dummy:
     needs: terraform
