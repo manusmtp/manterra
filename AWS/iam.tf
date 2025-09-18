@@ -35,7 +35,7 @@ resource "aws_iam_policy" "lambda_policy" {
           "s3:GetObject",
           "s3:PutObject"
         ],
-        Resource = "${aws_s3_bucket.upload_bucket.arn}/*"
+        Resource = "${var.s3_bucket_name.arn}/*"
       }
     ]
   })
